@@ -10,8 +10,10 @@ RUN apt-get update && \
 ENV BUILD_VERSION=4
 ADD ./conf /root
 ADD ./entrypoint.sh /root
-ENV APP_PORT=443 \
-    APP_ALG=aes-256-gcm \
+
+EXPOSE 443
+
+ENV APP_ALG=aes-256-gcm \
     APP_PW=123456
 
 CMD /root/entrypoint.sh
