@@ -2,8 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && \
     apt-get install -y python-pip && \
-    pip install --upgrade pip && \
-    pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U && \
+    pip install https://github.com/shadowsocksr-backup/shadowsocksr/archive/3.1.2.zip -U && \
     mv /usr/local/bin/ssserver /usr/local/bin/research && \
     rm -f /usr/local/bin/sslocal 
 
